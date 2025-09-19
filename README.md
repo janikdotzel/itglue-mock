@@ -1,58 +1,72 @@
 # IT Glue Mock API
 
-This project provides a Spring Boot based mock server that mirrors the structure of the [IT Glue developer API](https://api.itglue.com/developer/). It allows you to simulate real requests without depending on the live service and uses JSON files as the backing store for data, so the mock can be extended easily.
+This project provides an offline-friendly mock server that mirrors the structure of the [IT Glue developer API](https://api.itglue.com/developer/). It serves JSON:API compliant fixtures directly from disk so you can develop and test integrations without touching the live service.
 
 ## Features
 
-- JSON:API compliant responses with support for `include`, `filter`, `sort`, and `page` query parameters.
-- CRUD operations for every resource type shipped with the mock (`GET`, `POST`, `PATCH`, `DELETE`).
-- Relationship and related resource endpoints such as `/relationships/{name}` and `/{name}`.
-- Data bootstrapped from JSON fixtures located in `src/main/resources/mock-data`. Updating the fixtures changes the API output without recompiling.
-- Designed so that the HTTP contract matches the live IT Glue endpoints, allowing easy substitution.
+- Serves the same resource names and relationship endpoints documented by IT Glue (e.g. `/public_api/v2/organizations`, `/public_api/v2/organizations/1/relationships/contacts`).
+- Responds with the JSON payloads defined in `src/main/resources/mock-data`, making it easy to tailor scenarios by editing flat files.
+- Ships without external dependencies; the mock runs anywhere a Java 17 runtime is available.
+- Supports overriding the fixture directory via the `mock.data.dir` system property or `MOCK_DATA_DIR` environment variable.
 
 ## Getting started
 
 ### Prerequisites
 
 - Java 17+
-- Maven 3.9+
+- (Optional) Maven 3.9+
 
-### Running the mock server
+### Build the project
+
+If you have internet access, you can compile with Maven:
 
 ```bash
-mvn spring-boot:run
+mvn -q compile
 ```
 
-The server starts on port `8080`. For example, to list organizations:
+For completely offline environments, compile directly with `javac`:
 
 ```bash
-curl -H 'Accept: application/vnd.api+json' http://localhost:8080/public_api/v1/organizations
+mkdir -p target/classes
+javac $(find src/main/java -name '*.java') -d target/classes
 ```
 
-To retrieve a single organization including related contacts:
+### Run the mock server
 
 ```bash
-curl -H 'Accept: application/vnd.api+json' 'http://localhost:8080/public_api/v1/organizations/1?include=contacts'
+java -cp target/classes com.example.itglue.mock.ItGlueMockApplication
+```
+
+The server listens on port `8080` by default. Visit for example:
+
+```bash
+curl -H 'Accept: application/vnd.api+json' http://localhost:8080/public_api/v2/organizations
+```
+
+To point the server at an alternative fixture directory:
+
+```bash
+java -Dmock.data.dir=/path/to/fixtures -cp target/classes com.example.itglue.mock.ItGlueMockApplication
 ```
 
 ### Modifying mock data
 
-All seed data is stored as JSON arrays under `src/main/resources/mock-data`. The file name determines the resource type (e.g. `organizations.json` -> `organizations`). Each JSON file follows the JSON:API format. You can edit or add files to customise responses.
+1. Edit or add JSON files inside `src/main/resources/mock-data`. Each file should contain a JSON:API document with a top-level `data` member.
+2. Append the new file name to `src/main/resources/mock-data/index.txt` so the loader can discover it.
+3. Restart the mock server to pick up your changes.
 
-### Extending the API
+### Supported endpoints
 
-1. Create a new JSON fixture file under `src/main/resources/mock-data` with a `data` array describing the resources.
-2. Restart the application. The new type will be exposed automatically.
-3. If the real API introduces additional relationships or attributes, mirror them in the fixture files so clients continue to work unchanged.
+The mock currently implements `GET` handlers for:
 
-### Testing
+- Collection endpoints such as `/public_api/v2/organizations`.
+- Individual resources such as `/public_api/v2/organizations/{id}`.
+- Relationship links such as `/public_api/v2/organizations/{id}/relationships/{name}`.
 
-```bash
-mvn test
-```
+Other HTTP methods return `405 Method Not Allowed`. Query parameters are accepted but ignored.
 
 ## Notes
 
-- The mock does not implement rate limiting or authentication.
-- Generated identifiers for POST requests are numeric and based on existing fixture IDs.
-- Relationship includes cascade recursively, enabling tests of complex `include` graphs.
+- Authentication and rate limiting are intentionally omitted.
+- Responses are served verbatim from the fixture files. Ensure they match the live API contract your client expects.
+- Because everything runs from the local JVM, no external network access is required to build or execute the mock.
