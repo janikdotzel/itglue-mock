@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "type": "configuration-types",
+      "id": "1",
+      "attributes": {
+        "name": "Workstation",
+        "category": "Hardware",
+        "created-at": "2020-06-01T12:00:00Z",
+        "updated-at": "2024-08-22T16:30:00Z"
+      }
+    },
+    {
+      "type": "configuration-types",
+      "id": "2",
+      "attributes": {
+        "name": "Server",
+        "category": "Hardware",
+        "created-at": "2019-03-15T09:00:00Z",
+        "updated-at": "2024-05-12T10:45:00Z"
+      }
+    }
+  ]
+}

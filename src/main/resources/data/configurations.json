@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "type": "configurations",
+      "id": "100",
+      "attributes": {
+        "name": "ACME-WS-01",
+        "hostname": "acme-ws-01",
+        "serial-number": "ACMEWS01SN",
+        "asset-tag": "WS-001",
+        "status": "Active",
+        "primary-ip": "10.0.10.15",
+        "primary-mac-address": "00-16-3E-5D-78-01",
+        "operating-system": "Windows 11 Pro",
+        "os-licence-key": "XXXXX-XXXXX-XXXXX-XXXXX-AAAAA",
+        "processor": "Intel Core i7-11700",
+        "memory": "32 GB",
+        "storage": "1 TB NVMe SSD",
+        "last-logged-in-user": "maria.lopez",
+        "notes": "Primary workstation for Maria Lopez. Critical for firewall troubleshooting tickets.",
+        "installed-at": "2023-02-21T09:30:00Z",
+        "warranty-expiration": "2026-02-21"
+      },
+      "relationships": {
+        "organization": {
+          "data": {
+            "type": "organizations",
+            "id": "1"
+          }
+        },
+        "location": {
+          "data": {
+            "type": "locations",
+            "id": "1"
+          }
+        },
+        "configuration-type": {
+          "data": {
+            "type": "configuration-types",
+            "id": "1"
+          }
+        },
+        "primary-contact": {
+          "data": {
+            "type": "contacts",
+            "id": "1"
+          }
+        },
+        "passwords": {
+          "data": [
+            {
+              "type": "passwords",
+              "id": "1"
+            },
+            {
+              "type": "passwords",
+              "id": "2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "configurations",
+      "id": "200",
+      "attributes": {
+        "name": "GLOBEX-SRV-CORE",
+        "hostname": "globex-srv-core",
+        "serial-number": "GLOBEXSRV01",
+        "asset-tag": "SRV-01",
+        "status": "Maintenance",
+        "primary-ip": "172.16.20.50",
+        "primary-mac-address": "00-16-3E-5D-78-FF",
+        "operating-system": "Windows Server 2022",
+        "processor": "AMD EPYC 7313",
+        "memory": "128 GB",
+        "storage": "4 TB RAID10",
+        "last-logged-in-user": "elliot.reid",
+        "notes": "Core application server for Globex secure services.",
+        "installed-at": "2022-06-11T08:00:00Z",
+        "warranty-expiration": "2025-06-11"
+      },
+      "relationships": {
+        "organization": {
+          "data": {
+            "type": "organizations",
+            "id": "2"
+          }
+        },
+        "location": {
+          "data": {
+            "type": "locations",
+            "id": "2"
+          }
+        },
+        "configuration-type": {
+          "data": {
+            "type": "configuration-types",
+            "id": "2"
+          }
+        },
+        "primary-contact": {
+          "data": {
+            "type": "contacts",
+            "id": "2"
+          }
+        },
+        "passwords": {
+          "data": []
+        }
+      }
+    }
+  ]
+}

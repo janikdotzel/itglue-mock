@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "type": "locations",
+      "id": "1",
+      "attributes": {
+        "name": "Acme HQ",
+        "address1": "123 Industrial Way",
+        "city": "Springfield",
+        "state": "IL",
+        "postal-code": "62701",
+        "country": "USA"
+      },
+      "relationships": {
+        "organization": {
+          "data": {
+            "type": "organizations",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "locations",
+      "id": "2",
+      "attributes": {
+        "name": "Globex Support Center",
+        "address1": "900 Innovation Dr",
+        "city": "Metropolis",
+        "state": "NY",
+        "postal-code": "10001",
+        "country": "USA"
+      },
+      "relationships": {
+        "organization": {
+          "data": {
+            "type": "organizations",
+            "id": "2"
+          }
+        }
+      }
+    }
+  ]
+}

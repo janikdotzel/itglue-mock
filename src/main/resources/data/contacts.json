@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "type": "contacts",
+      "id": "1",
+      "attributes": {
+        "first-name": "Maria",
+        "last-name": "Lopez",
+        "title": "IT Manager",
+        "email": "maria.lopez@acme.example.com",
+        "mobile-phone": "+1-555-100-2000"
+      },
+      "relationships": {
+        "organization": {
+          "data": {
+            "type": "organizations",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "contacts",
+      "id": "2",
+      "attributes": {
+        "first-name": "Elliot",
+        "last-name": "Reid",
+        "title": "Security Analyst",
+        "email": "elliot.reid@globex.example.com",
+        "mobile-phone": "+1-555-200-3000"
+      },
+      "relationships": {
+        "organization": {
+          "data": {
+            "type": "organizations",
+            "id": "2"
+          }
+        }
+      }
+    }
+  ]
+}

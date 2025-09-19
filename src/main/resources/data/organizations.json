@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "type": "organizations",
+      "id": "1",
+      "attributes": {
+        "name": "Acme Manufacturing",
+        "short-name": "Acme",
+        "created-at": "2022-01-05T15:24:00Z",
+        "updated-at": "2024-09-18T10:15:00Z",
+        "primary-domain": "acme.example.com",
+        "description": "Primary customer organization used for workstation support PoC"
+      }
+    },
+    {
+      "type": "organizations",
+      "id": "2",
+      "attributes": {
+        "name": "Globex Services",
+        "short-name": "Globex",
+        "created-at": "2021-07-12T08:00:00Z",
+        "updated-at": "2024-10-02T11:45:00Z",
+        "primary-domain": "globex.example.com",
+        "description": "Secondary organization used to demonstrate search filtering"
+      }
+    }
+  ]
+}
