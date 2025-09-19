@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "configuration-types",
+      "attributes": {
+        "name": "Server",
+        "category-name": "Infrastructure",
+        "default-password-category-id": null,
+        "created-at": "2020-01-01T00:00:00Z",
+        "updated-at": "2023-11-11T11:11:00Z"
+      }
+    },
+    {
+      "id": "2",
+      "type": "configuration-types",
+      "attributes": {
+        "name": "Workstation",
+        "category-name": "Endpoints",
+        "default-password-category-id": "1",
+        "created-at": "2021-03-15T08:30:00Z",
+        "updated-at": "2024-03-01T10:00:00Z"
+      }
+    }
+  ]
+}

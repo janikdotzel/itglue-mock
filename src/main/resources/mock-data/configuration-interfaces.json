@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "configuration-interfaces",
+      "attributes": {
+        "name": "Ethernet0",
+        "ip-address": "192.168.10.10",
+        "mac-address": "00-25-96-FF-FE-12-34",
+        "created-at": "2023-01-15T12:05:00Z",
+        "updated-at": "2023-05-01T08:00:00Z"
+      },
+      "relationships": {
+        "configuration": {
+          "data": { "type": "configurations", "id": "1" }
+        }
+      }
+    }
+  ]
+}

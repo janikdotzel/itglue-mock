@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "operating-systems",
+      "attributes": {
+        "name": "Windows Server 2022",
+        "version": "2022",
+        "created-at": "2021-08-01T00:00:00Z",
+        "updated-at": "2023-09-10T00:00:00Z"
+      }
+    }
+  ]
+}

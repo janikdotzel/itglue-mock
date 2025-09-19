@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "locations",
+      "attributes": {
+        "name": "HQ",
+        "address-1": "123 Main St",
+        "city": "Metropolis",
+        "region": "NY",
+        "country": "USA",
+        "postal-code": "10001",
+        "created-at": "2023-01-05T12:00:00Z",
+        "updated-at": "2023-06-20T16:45:00Z"
+      },
+      "relationships": {
+        "organization": {
+          "data": { "type": "organizations", "id": "1" }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "locations",
+      "attributes": {
+        "name": "Gotham Office",
+        "address-1": "1007 Mountain Drive",
+        "city": "Gotham",
+        "region": "NJ",
+        "country": "USA",
+        "postal-code": "07001",
+        "created-at": "2022-05-12T09:30:00Z",
+        "updated-at": "2022-09-25T11:10:00Z"
+      },
+      "relationships": {
+        "organization": {
+          "data": { "type": "organizations", "id": "2" }
+        }
+      }
+    }
+  ]
+}

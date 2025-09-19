@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "configuration-statuses",
+      "attributes": {
+        "name": "In Production",
+        "created-at": "2019-05-01T00:00:00Z",
+        "updated-at": "2023-07-04T12:00:00Z"
+      }
+    },
+    {
+      "id": "2",
+      "type": "configuration-statuses",
+      "attributes": {
+        "name": "In Stock",
+        "created-at": "2019-05-01T00:00:00Z",
+        "updated-at": "2023-07-04T12:00:00Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "flexible-assets",
+      "attributes": {
+        "name": "Microsoft 365 E3",
+        "field-values": {
+          "license-key": "AAAAA-BBBBB-CCCCC-DDDDD-EEEEE",
+          "seat-count": 25,
+          "expiry-date": "2024-12-31"
+        },
+        "created-at": "2023-01-20T12:00:00Z",
+        "updated-at": "2023-08-01T12:00:00Z"
+      },
+      "relationships": {
+        "organization": { "data": { "type": "organizations", "id": "1" } },
+        "flexible-asset-type": { "data": { "type": "flexible-asset-types", "id": "1" } }
+      }
+    }
+  ]
+}

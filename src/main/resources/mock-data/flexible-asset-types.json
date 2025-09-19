@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "flexible-asset-types",
+      "attributes": {
+        "name": "License",
+        "created-at": "2019-01-01T00:00:00Z",
+        "updated-at": "2023-01-01T00:00:00Z"
+      }
+    }
+  ]
+}
