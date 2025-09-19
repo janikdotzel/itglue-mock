@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "configurations",
+      "attributes": {
+        "name": "Acme-AD-01",
+        "asset-tag": "ACME-SRV-01",
+        "serial-number": "SN123456",
+        "primary-ip": "192.168.10.10",
+        "created-at": "2023-01-15T12:00:00Z",
+        "updated-at": "2023-09-01T12:00:00Z"
+      },
+      "relationships": {
+        "organization": { "data": { "type": "organizations", "id": "1" } },
+        "location": { "data": { "type": "locations", "id": "1" } },
+        "configuration-type": { "data": { "type": "configuration-types", "id": "1" } },
+        "configuration-status": { "data": { "type": "configuration-statuses", "id": "1" } },
+        "contact": { "data": { "type": "contacts", "id": "1" } },
+        "manufacturer": { "data": { "type": "manufacturers", "id": "1" } },
+        "model": { "data": { "type": "models", "id": "1" } },
+        "operating-system": { "data": { "type": "operating-systems", "id": "1" } },
+        "passwords": {
+          "data": [
+            { "type": "passwords", "id": "1" }
+          ]
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "configurations",
+      "attributes": {
+        "name": "Acme-Laptop-01",
+        "asset-tag": "ACME-LPT-01",
+        "serial-number": "LPT654321",
+        "primary-ip": "192.168.20.21",
+        "created-at": "2023-03-01T12:00:00Z",
+        "updated-at": "2023-06-05T12:00:00Z"
+      },
+      "relationships": {
+        "organization": { "data": { "type": "organizations", "id": "1" } },
+        "configuration-type": { "data": { "type": "configuration-types", "id": "2" } },
+        "configuration-status": { "data": { "type": "configuration-statuses", "id": "1" } },
+        "contact": { "data": { "type": "contacts", "id": "2" } }
+      }
+    },
+    {
+      "id": "3",
+      "type": "configurations",
+      "attributes": {
+        "name": "Wayne-Server-01",
+        "asset-tag": "WAYNE-SRV-01",
+        "serial-number": "WAYNE001",
+        "primary-ip": "10.10.10.5",
+        "created-at": "2022-06-01T09:00:00Z",
+        "updated-at": "2023-08-12T12:00:00Z"
+      },
+      "relationships": {
+        "organization": { "data": { "type": "organizations", "id": "2" } },
+        "location": { "data": { "type": "locations", "id": "2" } },
+        "configuration-type": { "data": { "type": "configuration-types", "id": "1" } },
+        "configuration-status": { "data": { "type": "configuration-statuses", "id": "2" } },
+        "contact": { "data": { "type": "contacts", "id": "3" } }
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "documents",
+      "attributes": {
+        "name": "Acme Onboarding",
+        "document-type": "Standard",
+        "content": "# Acme Onboarding\nThis is a mock document.",
+        "created-at": "2023-01-20T12:00:00Z",
+        "updated-at": "2023-03-01T12:00:00Z"
+      },
+      "relationships": {
+        "organization": { "data": { "type": "organizations", "id": "1" } },
+        "document-folder": { "data": { "type": "document-folders", "id": "1" } }
+      }
+    }
+  ]
+}

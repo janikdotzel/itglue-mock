@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "configuration-relations",
+      "attributes": {
+        "relation-type": "Depends On"
+      },
+      "relationships": {
+        "configuration": { "data": { "type": "configurations", "id": "1" } },
+        "related-configuration": { "data": { "type": "configurations", "id": "2" } }
+      }
+    }
+  ]
+}

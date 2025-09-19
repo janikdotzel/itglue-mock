@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "organizations",
+      "attributes": {
+        "name": "Acme Corp",
+        "short-name": "Acme",
+        "organization-type-name": "Client",
+        "organization-status-name": "Active",
+        "primary-domain": "acme.example",
+        "created-at": "2023-01-05T12:00:00Z",
+        "updated-at": "2023-08-15T09:30:00Z"
+      },
+      "relationships": {
+        "locations": {
+          "data": [
+            { "type": "locations", "id": "1" }
+          ]
+        },
+        "contacts": {
+          "data": [
+            { "type": "contacts", "id": "1" },
+            { "type": "contacts", "id": "2" }
+          ]
+        },
+        "configurations": {
+          "data": [
+            { "type": "configurations", "id": "1" },
+            { "type": "configurations", "id": "2" }
+          ]
+        },
+        "documents": {
+          "data": [
+            { "type": "documents", "id": "1" }
+          ]
+        },
+        "passwords": {
+          "data": [
+            { "type": "passwords", "id": "1" }
+          ]
+        },
+        "flexible-assets": {
+          "data": [
+            { "type": "flexible-assets", "id": "1" }
+          ]
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "organizations",
+      "attributes": {
+        "name": "Wayne Enterprises",
+        "short-name": "Wayne",
+        "organization-type-name": "Prospect",
+        "organization-status-name": "Active",
+        "primary-domain": "wayne.example",
+        "created-at": "2022-05-10T08:00:00Z",
+        "updated-at": "2024-02-20T14:10:00Z"
+      },
+      "relationships": {
+        "locations": {
+          "data": [
+            { "type": "locations", "id": "2" }
+          ]
+        },
+        "contacts": {
+          "data": [
+            { "type": "contacts", "id": "3" }
+          ]
+        },
+        "configurations": {
+          "data": [
+            { "type": "configurations", "id": "3" }
+          ]
+        }
+      }
+    }
+  ]
+}

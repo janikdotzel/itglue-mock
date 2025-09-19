@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "contacts",
+      "attributes": {
+        "first-name": "Clark",
+        "last-name": "Kent",
+        "title": "IT Manager",
+        "primary-email": "clark.kent@acme.example",
+        "primary-phone": "+1-555-0100",
+        "created-at": "2023-01-10T10:00:00Z",
+        "updated-at": "2023-04-15T15:20:00Z"
+      },
+      "relationships": {
+        "organization": {
+          "data": { "type": "organizations", "id": "1" }
+        },
+        "location": {
+          "data": { "type": "locations", "id": "1" }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "contacts",
+      "attributes": {
+        "first-name": "Lois",
+        "last-name": "Lane",
+        "title": "Operations Director",
+        "primary-email": "lois.lane@acme.example",
+        "primary-phone": "+1-555-0101",
+        "created-at": "2023-02-01T09:15:00Z",
+        "updated-at": "2023-07-08T12:00:00Z"
+      },
+      "relationships": {
+        "organization": {
+          "data": { "type": "organizations", "id": "1" }
+        }
+      }
+    },
+    {
+      "id": "3",
+      "type": "contacts",
+      "attributes": {
+        "first-name": "Bruce",
+        "last-name": "Wayne",
+        "title": "CEO",
+        "primary-email": "bruce.wayne@wayne.example",
+        "primary-phone": "+1-555-0200",
+        "created-at": "2022-05-14T08:00:00Z",
+        "updated-at": "2024-01-20T18:30:00Z"
+      },
+      "relationships": {
+        "organization": {
+          "data": { "type": "organizations", "id": "2" }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "document-folders",
+      "attributes": {
+        "name": "Client Runbooks",
+        "created-at": "2022-01-01T00:00:00Z",
+        "updated-at": "2023-02-01T00:00:00Z"
+      },
+      "relationships": {
+        "organization": { "data": { "type": "organizations", "id": "1" } }
+      }
+    }
+  ]
+}

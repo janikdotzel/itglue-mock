@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "models",
+      "attributes": {
+        "name": "PowerEdge R740",
+        "created-at": "2018-05-01T00:00:00Z",
+        "updated-at": "2023-05-01T00:00:00Z"
+      },
+      "relationships": {
+        "manufacturer": {
+          "data": { "type": "manufacturers", "id": "1" }
+        }
+      }
+    }
+  ]
+}
